@@ -81,38 +81,8 @@ export async function createInitialHelpMenu(client) {
 
     embed.addFields(
         {
-            name: "🛡️ **Moderation**",
-            value: "Server moderation, user management, and enforcement tools",
-            inline: true
-        },
-        {
-            name: "💰 **Economy**",
-            value: "Currency system, shops, and virtual economy",
-            inline: true
-        },
-        {
-            name: "🎮 **Fun**",
-            value: "Games, entertainment, and interactive commands",
-            inline: true
-        },
-        {
-            name: "📊 **Leveling**",
-            value: "User levels, XP system, and progression tracking",
-            inline: true
-        },
-        {
             name: "🎫 **Tickets**",
             value: "Support ticket system for server management",
-            inline: true
-        },
-        {
-            name: "🎉 **Giveaways**",
-            value: "Automated giveaway management and distribution",
-            inline: true
-        },
-        {
-            name: "👋 **Welcome**",
-            value: "Member welcome messages and onboarding",
             inline: true
         },
         {
@@ -136,21 +106,6 @@ export async function createInitialHelpMenu(client) {
             inline: true
         },
         {
-            name: "🎙️ **Join to Create**",
-            value: "Dynamic voice channel creation and management",
-            inline: true
-        },
-        {
-            name: "🎭 **Reaction Roles**",
-            value: "Self-assignable roles using reaction-role systems",
-            inline: true
-        },
-        {
-            name: "✅ **Verification**",
-            value: "Member verification workflows and access gating",
-            inline: true
-        },
-        {
             name: "🔧 **Utilities**",
             value: "Useful tools and server utilities",
             inline: true
@@ -158,24 +113,9 @@ export async function createInitialHelpMenu(client) {
     );
 
     embed.setFooter({ 
-        text: "Made with ❤️" 
+        text: "Made with ♥!" 
     });
-    embed.setTimestamp();
-
-    const bugReportButton = new ButtonBuilder()
-        .setCustomId(BUG_REPORT_BUTTON_ID)
-        .setLabel("Report Bug")
-        .setStyle(ButtonStyle.Danger);
-
-    const supportButton = new ButtonBuilder()
-        .setLabel("Support Server")
-        .setURL("https://discord.gg/QnWNz2dKCE")
-        .setStyle(ButtonStyle.Link);
-
-    const touchpointButton = new ButtonBuilder()
-        .setLabel("Learn from Touchpoint")
-        .setURL("https://www.youtube.com/@TouchDisc")
-        .setStyle(ButtonStyle.Link);
+    embed.setTimestamp();\
 
     const selectRow = createSelectMenu(
         CATEGORY_SELECT_ID,
