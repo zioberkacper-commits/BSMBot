@@ -123,15 +123,9 @@ export async function createInitialHelpMenu(client) {
         options,
     );
 
-    const buttonRow = new ActionRowBuilder().addComponents([
-        bugReportButton,
-        supportButton,
-        touchpointButton,
-    ]);
-
     return {
         embeds: [embed],
-        components: [buttonRow, selectRow],
+        components: [selectRow],
     };
 }
 
